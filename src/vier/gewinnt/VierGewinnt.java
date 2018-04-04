@@ -26,6 +26,8 @@ public class VierGewinnt{
         
         public static void setSpielzug(boolean spieler){
             VierGewinnt.spieler = spieler;
+            VierGewinnt.spieler = !VierGewinnt.spieler;
+            
         }
      
     
