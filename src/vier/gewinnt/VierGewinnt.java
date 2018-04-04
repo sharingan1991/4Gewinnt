@@ -6,21 +6,26 @@ package vier.gewinnt;
 public class VierGewinnt{
 
     private char spielfeld[][];
+    private static boolean spieler = true;
     
-        public VierGewinnt(){
+        private VierGewinnt(){
         
         }
    
-        public static void Spielstart(){
+        private static void Spielstart(){
             Spielreset();
         }
     
-        public static void Spielreset(){
+        private static void Spielreset(){
         
         }
     
-        public static void Spielereingabe(){
+        private static void Spielereingabe(){
         
+        }
+        
+        public static void setSpielzug(boolean spieler){
+            VierGewinnt.spieler = spieler;
         }
      
     
