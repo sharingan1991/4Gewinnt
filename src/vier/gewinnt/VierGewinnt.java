@@ -5,22 +5,22 @@ package vier.gewinnt;
  */
 public class VierGewinnt{
 
-    char[][] spielfeld = new char[7][6];
+    private char[][] spielfeld = new char[7][6];
     private boolean spieler = true;
     
-        private VierGewinnt(){
+        public VierGewinnt(){
         
         }
    
-        private void Spielstart(){
+        public void Spielstart(){
             Spielreset();
         }
     
-        private void Spielreset(){
+        public void Spielreset(){
         
         }
     
-        private void Spielereingabe(){
+        public void Spielereingabe(){
         
         }
         
