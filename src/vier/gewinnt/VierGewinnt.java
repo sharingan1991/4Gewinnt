@@ -5,11 +5,12 @@ package vier.gewinnt;
  */
 public class VierGewinnt{
 
-    private char[][] spielfeld = new char[7][6];
+    private final char[][] spielfeld = new char[7][6];
     private boolean spieler = true;
+    private final Inputlistener listener;
     
         public VierGewinnt(){
-        
+            listener = new Inputlistener();
         }
    
         public void Spielstart(){
