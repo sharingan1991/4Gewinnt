@@ -12,39 +12,35 @@ public class Imputlistener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
        
-        if(e.getActionCommand() == "button_start") 
+        switch (e.getActionCommand()) 
         {
-            
-        }
-        
-        if(e.getActionCommand() == "button_einstellungen") 
-        {
-            
-        }
-        
-        if(e.getActionCommand() == "button_hilfe") 
-        {
-            
-        }
-        
-        if(e.getActionCommand() == "button_about") 
-        {
-            
-        }
-        
-        if(e.getActionCommand() == "button_sprache") 
-        {
-            
-        }
-        
-        if(e.getActionCommand() == "button_start") 
-        {
-            
-        }
-        
-        if(e.getActionCommand() == "button_start") 
-        {
-            
+            //Hauptmenue
+            case "button_start":
+                break;
+            case "button_einstellungen":
+                break;
+            case "button_about":
+                break;
+            case "button_hilfe":
+                break;
+            case "button_sprache":
+                break;
+            //Spalten     
+            case "A":
+                break;
+            case "B":
+                break;
+            case "C":
+                break;
+            case "D":
+                break;
+            case "E":
+                break;
+            case "F":
+                break;
+            //Default   
+            default:
+                break;  
         }
        
     }
