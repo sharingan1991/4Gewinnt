@@ -12,7 +12,7 @@ public class VierGewinnt{
         }
    
         public static void Spielstart(){
-        Spielreset();
+            Spielreset();
         }
     
         public static void Spielreset(){
@@ -28,7 +28,7 @@ public class VierGewinnt{
     
     
         public static void main(String[] args){
-        new VierGewinnt();    
+            new VierGewinnt();    
         }
 }
         
