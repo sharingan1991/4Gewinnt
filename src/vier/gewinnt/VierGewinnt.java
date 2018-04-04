@@ -28,6 +28,10 @@ public class VierGewinnt{
         public void toggelSpielzug(){
             this.spieler = !this.spieler;   
         }
+        
+        public boolean getSpieler(){
+            return this.spieler;
+        }
      
     
     
