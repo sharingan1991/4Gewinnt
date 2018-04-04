@@ -7,7 +7,7 @@ package vier.gewinnt;
 
 /**
  *
- * @author Sen
+ * @author Sen Schwarz
  */
 public class VierGewinnt {
 
