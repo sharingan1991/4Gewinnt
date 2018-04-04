@@ -5,7 +5,7 @@ package vier.gewinnt;
  */
 public class VierGewinnt{
 
-    private char spielfeld[][];
+    char[][] spielfeld = new char[7][6];
     private boolean spieler = true;
     
         private VierGewinnt(){
@@ -24,10 +24,8 @@ public class VierGewinnt{
         
         }
         
-        public void setSpielzug(boolean spieler){
-            this.spieler = spieler;
-            this.spieler = !this.spieler;
-            
+        public void toggelSpielzug(){
+            this.spieler = !this.spieler;   
         }
      
     
