@@ -12,19 +12,19 @@ public class VierGewinnt{
         
         }
    
-        private static void Spielstart(){
+        private void Spielstart(){
             Spielreset();
         }
     
-        private static void Spielreset(){
+        private void Spielreset(){
         
         }
     
-        private static void Spielereingabe(){
+        private void Spielereingabe(){
         
         }
         
-        public static void setSpielzug(boolean spieler){
+        public void setSpielzug(boolean spieler){
             this.spieler = spieler;
             this.spieler = !this.spieler;
             
