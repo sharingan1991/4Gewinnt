@@ -15,8 +15,8 @@ public class VierGewinnt{
             listener = new Inputlistener();
         }
    
-        public static void Spielstart(){
-            Spielreset(this.spielfeld[][]);
+        public void Spielstart(){
+            Spielreset(this.spielfeld);
         }
     
         public int[][] Spielreset(int spielfeldleer[][]){       

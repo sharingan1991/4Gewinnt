@@ -26,17 +26,17 @@ public class Inputlistener implements ActionListener{
             case "button_sprache":
                 break;
             //Spalten     
-            case "A":
+            case "1":
                 break;
-            case "B":
+            case "2":
                 break;
-            case "C":
+            case "3":
                 break;
-            case "D":
+            case "4":
                 break;
-            case "E":
+            case "5":
                 break;
-            case "F":
+            case "6":
                 break;
             //Default   
             default:
