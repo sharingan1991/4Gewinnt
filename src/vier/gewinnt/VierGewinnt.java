@@ -68,13 +68,11 @@ public class VierGewinnt{
         }
         
         
-        public int[][] Spielzug(int spielfeld[][], int spaltennummer,
-			boolean spieler) { //Setzen des Spielsteins
+        public int[][] Spielzug(int spielfeld[][], int spaltennummer) { //Setzen des Spielsteins
                 
-                spieler = this.spieler;
                 int spielstein;
                 
-                if (spieler = true){
+                if (this.spieler = true){
                     spielstein = 1; //Spieler1
                 }
                 else
