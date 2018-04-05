@@ -9,6 +9,7 @@ public class VierGewinnt{
     private final Inputlistener listener;
     
     private boolean spieler = true; // Spieler1 = True, Spieler2= False
+    private int zug;
     
         public VierGewinnt(){
             listener = new Inputlistener();
@@ -33,7 +34,7 @@ public class VierGewinnt{
         
         }
         
-        public int[][] spielzug(int spielfeld[][], int spaltennummer,
+        public int[][] Spielzug(int spielfeld[][], int spaltennummer,
 			boolean spieler) {
                 
                 int spielstein;
@@ -49,10 +50,12 @@ public class VierGewinnt{
 		for (int i = 5; i >= 0; i--)
 		{
 			if (spielfeld[i][spaltennummer] == 9){ // überprüft freie Stelle 
-                                spielfeld[i][spaltennummer] = spielstein;
+                                spielfeld[i][spaltennummer] = spielstein; // setzt Spielstein
 				i = 0; 
 			}
 		}
+                toggelSpielzug();
+                this.zug++;
 		return spielfeld;
 	}
 
@@ -67,11 +70,11 @@ public class VierGewinnt{
         public boolean getSpieler(){
             return this.spieler;
         }
-     
-    
-    
-    
-    
+        
+        public int getZug(){
+            return this.zug;
+        }
+        
         public static void main(String[] args){
             new VierGewinnt();          
         }
