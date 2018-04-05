@@ -21,9 +21,9 @@ public class VierGewinnt{
         }
     
         public int[][] Spielreset(int spielfeldleer[][]){       
-            for (int j = 0; j < 6; j++) // j = Zeilen
+            for (int j = 0; j < 5; j++) // j = Zeilen
 		{
-			for (int i = 0; i < 7; i++) // i = Spalten
+			for (int i = 0; i < 6; i++) // i = Spalten
 			{
 				spielfeldleer[j][i] = 9;
                         }
@@ -62,7 +62,7 @@ public class VierGewinnt{
                                    && spielfeld[0][2] != 9 && spielfeld[0][3] != 9
                                    && spielfeld[0][4] != 9 && spielfeld[0][4] != 9
                                    && spielfeld[0][5] != 9 && spielfeld[0][6] != 9;
-		
+
                 return vollesBrett;
 		
         }
@@ -71,6 +71,7 @@ public class VierGewinnt{
         public int[][] Spielzug(int spielfeld[][], int spaltennummer,
 			boolean spieler) { //Setzen des Spielsteins
                 
+                spieler = this.spieler;
                 int spielstein;
                 
                 if (spieler = true){
