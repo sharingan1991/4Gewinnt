@@ -37,7 +37,7 @@ public class VierGewinnt{
         }
         
         public int gueltigeEingabe(){ //Gültigkeit der Abfrage
-            int spalte = -1;
+            int spalte;
             spalte = Spielereingabe();   
             int spaltennummer = spalte - 1; // -1 wegen Array
                while (0 > spaltennummer || spaltennummer >= 7){ // ungültige eingabe abfrage erneut
