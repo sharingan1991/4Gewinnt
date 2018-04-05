@@ -5,7 +5,7 @@ package vier.gewinnt;
  */
 public class VierGewinnt{
 
-    private final char spielfeld [][] = new char[7][6]; //Spalten - Zeilen
+    private final char [][] spielfeld = new char[7][6]; //Spalten - Zeilen
     private final Inputlistener listener;
     
     private boolean spieler = true; // Spieler1 = True, Spieler2= False
@@ -15,7 +15,7 @@ public class VierGewinnt{
         }
    
         public void Spielstart(){
-            Spielreset(spielfeld[][]);
+            Spielreset(this.spielfeld[][]);
         }
     
         public char[][] Spielreset(char spielfeldleer[][]){       
@@ -33,7 +33,28 @@ public class VierGewinnt{
         
         }
         
-        
+        public char[][] spielzug(char spielfeld[][], int spaltennummer,
+			boolean spieler) {
+                
+                char spielstein;
+                
+                if (spieler = true){
+                    spielstein = '1'; //Spieler1
+                }
+                else
+                {
+                    spielstein = '2'; //Spieler2
+                }
+            
+		for (int i = 5; i >= 0; i--)
+		{
+			if (spielfeld[i][spaltennummer] == '9'){ // überprüft freie Stelle 
+                                spielfeld[i][spaltennummer] = spielstein;
+				i = 0; 
+			}
+		}
+		return spielfeld;
+	}
 
 		
 				
