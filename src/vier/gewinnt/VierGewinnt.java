@@ -9,13 +9,14 @@ public class VierGewinnt{
     private final Inputlistener listener;
     
     private boolean spieler = true; // Spieler1 = True, Spieler2= False
+    private int Spaltennummer;
     private int zug;
     
-        public VierGewinnt(){
+        public VierGewinnt(){ //Konstruktor
             listener = new Inputlistener();
         }
    
-        public void Spielstart(){
+        public static void Spielstart(){
             Spielreset(this.spielfeld[][]);
         }
     
@@ -30,12 +31,45 @@ public class VierGewinnt{
             return spielfeldleer;
         }
     
-        public void Spielereingabe(){
-        
+        public int Spielereingabe(){
+            int spalte=0; //dummy!!!!!
+            return spalte;
         }
         
+        public int gueltigeEingabe(){ //Gültigkeit der Abfrage
+            int spalte = -1;
+            spalte = Spielereingabe();   
+            int spaltennummer = spalte - 1; // -1 wegen Array
+               while (0 > spaltennummer || spaltennummer >= 7){ // ungültige eingabe abfrage erneut
+                   spalte = Spielereingabe();
+                   spaltennummer = spalte - 1;
+               }
+               return spaltennummer;
+        }
+        
+        public boolean volleSpalte (int spielfeld[][]) { //Return entspricht True = Spalte voll
+       
+            int spaltennummer = gueltigeEingabe();
+            boolean spaltevoll = spielfeld[0][spaltennummer] != 9; 
+                    
+            return spaltevoll; 
+
+        }
+        
+        public boolean SpielbrettVoll(int spielfeld[][]){ //Return entspricht True = Unentschieden
+                
+		boolean vollesBrett = spielfeld[0][0] != 9 && spielfeld[0][1] != 9
+                                   && spielfeld[0][2] != 9 && spielfeld[0][3] != 9
+                                   && spielfeld[0][4] != 9 && spielfeld[0][4] != 9
+                                   && spielfeld[0][5] != 9 && spielfeld[0][6] != 9;
+		
+                return vollesBrett;
+		
+        }
+        
+        
         public int[][] Spielzug(int spielfeld[][], int spaltennummer,
-			boolean spieler) {
+			boolean spieler) { //Setzen des Spielsteins
                 
                 int spielstein;
                 
@@ -54,8 +88,6 @@ public class VierGewinnt{
 				i = 0; 
 			}
 		}
-                toggelSpielzug();
-                this.zug++;
 		return spielfeld;
 	}
 
@@ -63,15 +95,15 @@ public class VierGewinnt{
 				
 	
         
-        public void toggelSpielzug(){
+        public void toggelSpieler(){
             this.spieler = !this.spieler;   
         }
         
-        public boolean getSpieler(){
+        public boolean getAktuellerSpieler(){
             return this.spieler;
         }
         
-        public int getZug(){
+        public int getZugAnzahl(){
             return this.zug;
         }
         
