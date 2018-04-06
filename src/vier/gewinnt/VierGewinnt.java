@@ -57,13 +57,12 @@ public class VierGewinnt{
         
         public boolean SpielbrettVoll(int spielfeld[][]){ //Return entspricht True = Unentschieden
                 
-		boolean vollesBrett = spielfeld[0][0] != 9 && spielfeld[0][1] != 9
-                                   && spielfeld[0][2] != 9 && spielfeld[0][3] != 9
-                                   && spielfeld[0][4] != 9 && spielfeld[0][4] != 9
-                                   && spielfeld[0][5] != 9 && spielfeld[0][6] != 9;
-
-                return vollesBrett;
-		
+	  for (int i = 0; i <= 6; i++){
+                if(spielfeld[0][i] != 9){
+                    return true;
+                }
+            }
+                    return false;
         }
         
         
