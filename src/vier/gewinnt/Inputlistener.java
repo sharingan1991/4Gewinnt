@@ -15,7 +15,7 @@ public class Inputlistener implements ActionListener{
         switch (e.getActionCommand()){
             //Hauptmenue
             case "button_start": 
-                VierGewinnt.Spielstart();
+                
                 break;
             case "button_einstellungen":
                 break;
