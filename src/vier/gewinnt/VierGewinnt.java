@@ -15,9 +15,22 @@ public class VierGewinnt{
         
         System.out.println(sf);
         
-        sf.Spielzug(1, 1);
+        int spielerzahl=1;
         
-        sf.Spielzug(1, 2);
+        for (int i = 0; i < 6; i++){ // i = Zeilen
+		
+            for (int j = 0; j < 7; j++){ // j = Spalten
+		
+		sf.Spielzug(j, spielerzahl);
+                spielerzahl = 3 - spielerzahl;
+            }
+
+        }
+       
+        System.out.println(sf.SpielbrettVoll());
+        
+        
+  
         
         System.out.println(sf);
         }
