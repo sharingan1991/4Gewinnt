@@ -65,7 +65,7 @@ public Spielfeld(int zeile, int spalte){
                 return false;
     }
     
-    public boolean CheckWin(int spaltennummer,int zeile, int spieler){
+    public void CheckWin(int spaltennummer,int zeile, int spieler){
     
         for (int i = 0; i < 6; i++){ // i = Zeilen
 		
